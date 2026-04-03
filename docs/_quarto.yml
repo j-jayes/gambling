@@ -1,0 +1,12 @@
+project:
+  title: "World Cup 2026 Prediction Markets"
+
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    incremental: true
+    toc: true
+
+execute:
+  freeze: auto

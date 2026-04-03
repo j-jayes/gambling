@@ -1,0 +1,54 @@
+---
+title: "World Cup 2026 Prediction Markets System"
+subtitle: "Research-First Architecture and Modeling Plan"
+author: "Data Science Project"
+format: revealjs
+---
+
+## Objective
+
+- Build a reproducible research system for World Cup market prediction.
+- Aggregate prediction market prices, bookmaker odds, and football statistics.
+- Produce calibrated probabilities and backtested expected-value signals.
+
+## Why Research-First
+
+- Avoid premature automation risk.
+- Validate assumptions using leakage-safe backtests.
+- Focus on calibration, reliability, and risk controls.
+
+## Data Architecture
+
+- Bronze: raw market and stats snapshots.
+- Silver: normalized entities, aligned timestamps.
+- Gold: model-ready features and backtest outputs.
+
+## Source Strategy
+
+- Prediction markets: Polymarket Gamma/CLOB metadata and quotes.
+- Bookmaker odds: hybrid strategy with optional The Odds API/API-Football.
+- Stats: soccerdata connectors (FBref/Understat-compatible workflows).
+
+## Modeling Stack
+
+- Baseline: Poisson/Elo-informed features.
+- Mid-complexity: gradient boosting classifier for selected targets.
+- Calibration: reliability diagnostics with Brier/log loss tracking.
+
+## Backtesting
+
+- Time-aware validation windows.
+- Edge thresholding against implied probabilities.
+- Bankroll controls with capped fractional Kelly policy.
+
+## Dashboard Outputs
+
+- Equity curve and drawdown.
+- Attribution by market type and team/stage.
+- Signal confidence vs market-implied probability.
+
+## Next Iterations
+
+- Add explicit 1X2 and outright target pipelines.
+- Improve feature coverage (travel, rest, injuries, xG depth).
+- Add model monitoring and weekly artifact publication.

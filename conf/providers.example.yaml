@@ -1,0 +1,30 @@
+polymarket:
+  enabled: true
+  gamma_base_url: "https://gamma-api.polymarket.com"
+  clob_base_url: "https://clob.polymarket.com"
+  ws_url: "wss://ws-subscriptions-clob.polymarket.com/ws/"
+
+the_odds_api:
+  enabled: false
+  api_key_env: "THE_ODDS_API_KEY"
+  base_url: "https://api.the-odds-api.com/v4"
+  regions: ["eu", "uk", "us"]
+  markets: ["h2h", "totals", "outrights"]
+
+api_football:
+  enabled: false
+  api_key_env: "API_FOOTBALL_KEY"
+  base_url: "https://v3.football.api-sports.io"
+
+sportmonks:
+  enabled: false
+  api_token_env: "SPORTMONKS_TOKEN"
+  base_url: "https://api.sportmonks.com/v3/football"
+
+soccerdata:
+  enabled: true
+  cache_dir: "data/external/soccerdata_cache"
+
+manual_sources:
+  club_elo_csv: "data/external/club_elo.csv"
+  football_data_csv_dir: "data/external/football_data"
